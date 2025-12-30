@@ -11,7 +11,6 @@ public class SmokeTest extends BaseTest{
 //    }
     @Test
     public void openBaseUrl(){
-        //Base URL is opened in BaseTest
-        //Test remains clean and focused
+        waitForTitleContains("Google");
     }
 }

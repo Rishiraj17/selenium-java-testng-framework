@@ -169,3 +169,23 @@ selenium-framework/
 - `@BeforeMethod` provides safer isolation than `@BeforeClass`
 - Reliability is prioritized over execution speed
 - Defensive cleanup (nullifying driver) avoids stale references
+
+---
+
+## Day 8: Explicit Wait Strategy (Stability Improvement)
+
+### What Changed
+- Introduced explicit waits using `WebDriverWait`
+- Centralized wait configuration in `BaseTest`
+- Added a helper method to wait for page readiness
+- Used explicit wait in smoke test to verify page load
+
+### Why This Change Was Made
+- To eliminate flakiness caused by timing issues
+- To avoid using `Thread.sleep()`
+- To ensure tests wait intelligently for browser state
+
+### Key Learnings
+- Explicit waits pause the test thread, not the browser
+- `ExpectedConditions` represent waitable browser states
+- Centralizing waits improves consistency and readability
