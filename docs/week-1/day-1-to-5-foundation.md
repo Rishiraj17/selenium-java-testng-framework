@@ -125,3 +125,28 @@ selenium-framework/
 - Clean project structuring
 - Discipline in version control
 - Focus on explainability over shortcuts
+
+---
+
+## Day 6: Configuration & Scalability Foundation
+
+### What Changed
+- Introduced external configuration using `config.properties`
+- Removed hardcoded browser and base URL from test code
+- Centralized setup logic inside `BaseTest`
+
+### Key Additions
+- `src/test/resources/config/config.properties`
+- `ConfigReader` utility to load properties
+- Updated `BaseTest` to read browser and URL from config
+- Simplified `SmokeTest` to rely on base setup
+
+### Why This Change Was Made
+- To separate environment-specific data from code
+- To make tests environment-agnostic
+- To improve scalability and maintainability of the framework
+
+### Learning Outcome
+- Understood the purpose of `src/test/resources`
+- Learned how Java loads resources via classpath
+- Learned why setup logic should not live inside test methods
