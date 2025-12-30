@@ -150,3 +150,22 @@ selenium-framework/
 - Understood the purpose of `src/test/resources`
 - Learned how Java loads resources via classpath
 - Learned why setup logic should not live inside test methods
+
+---
+
+## Day 7: Driver Lifecycle & Test Isolation
+
+### What Changed
+- Switched driver lifecycle from per-class to per-test execution
+- Updated setup and teardown to use `@BeforeMethod` and `@AfterMethod`
+- Explicitly nullified WebDriver after quitting
+
+### Why This Change Was Made
+- To ensure complete test isolation
+- To prevent shared state between tests
+- To improve reliability and debuggability of failures
+
+### Key Learnings
+- `@BeforeMethod` provides safer isolation than `@BeforeClass`
+- Reliability is prioritized over execution speed
+- Defensive cleanup (nullifying driver) avoids stale references
