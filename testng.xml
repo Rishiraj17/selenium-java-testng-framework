@@ -2,7 +2,8 @@
 <suite name="Automation Suite">
     <test name="Smoke Tests">
         <classes>
-            <class name="tests.SmokeTest"></class>
+<!--            <class name="tests.SmokeTest"></class>-->
+            <class name="tests.LoginSmokeTest"></class>
         </classes>
     </test>
 </suite>

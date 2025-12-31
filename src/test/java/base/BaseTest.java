@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import factory.BrowserFactory;
 
 public class BaseTest {
@@ -53,6 +54,10 @@ public class BaseTest {
 
     protected void waitForTitleContains(String text){
         wait.until(ExpectedConditions.titleContains(text));
+    }
+
+    protected void waitForElementVisible(By locator){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     @AfterMethod
