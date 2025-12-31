@@ -209,3 +209,21 @@ selenium-framework/
 - Keeps browser creation logic isolated from test lifecycle
 - Allows easy extension for new browsers
 - Supports both automated and manual driver management strategies
+
+---
+
+## Day 10: Assertion & Validation Strategy
+
+### What Changed
+- Added a meaningful assertion to the smoke test
+- Validated page load using title-based verification
+
+### Assertion Philosophy
+- One primary assertion per test
+- Assertions live only in test classes
+- Setup and base layers contain no assertions
+
+### Key Learnings
+- Assertions verify correctness; waits handle timing
+- `assertTrue` is preferred for UI conditions that may vary
+- Clear failure messages improve debuggability
