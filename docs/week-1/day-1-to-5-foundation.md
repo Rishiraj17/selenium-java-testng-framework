@@ -189,3 +189,23 @@ selenium-framework/
 - Explicit waits pause the test thread, not the browser
 - `ExpectedConditions` represent waitable browser states
 - Centralizing waits improves consistency and readability
+
+---
+
+## Day 9: Browser Factory & Multi-Browser Support
+
+### What Changed
+- Introduced a `BrowserFactory` to centralize browser creation
+- Refactored `BaseTest` to delegate driver creation to the factory
+- Added multi-browser support using configuration-based switching
+
+### Edge Driver Handling (Environment Constraint)
+- ChromeDriver is managed using WebDriverManager
+- EdgeDriver is managed manually via system property due to network-level
+  restrictions blocking Microsoft CDN (`azureedge.net`)
+- This approach ensures framework stability in restricted or offline environments
+
+### Why This Design Was Chosen
+- Keeps browser creation logic isolated from test lifecycle
+- Allows easy extension for new browsers
+- Supports both automated and manual driver management strategies
