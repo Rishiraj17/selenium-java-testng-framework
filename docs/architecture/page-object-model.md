@@ -45,3 +45,21 @@ Introduced Page Object Model to:
 - Improves confidence beyond happy-path testing
 - Demonstrates correct assertion strategy for failure cases
 
+---
+
+## Dashboard Page Validation
+
+### Objective
+Verify that a successful login results in a valid dashboard state,
+not just a URL change.
+
+### Implementation
+- Introduced `DashboardPage` as a separate Page Object
+- Defined dashboard readiness using a unique UI identifier
+- Moved post-login validation logic out of tests
+
+### Why This Matters
+- Confirms application state, not navigation alone
+- Demonstrates multi-page workflow automation
+- Strengthens Page Object Model scalability
+

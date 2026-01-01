@@ -1,6 +1,7 @@
 package tests;
 
 import base.BaseTest;
+import pages.DashboardPage;
 import pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -19,12 +20,12 @@ public class LoginSmokeTest extends BaseTest{
         // Perform login
         loginPage.login("Admin","admin123");
 
-        //wait for dashboard
-        waitForTitleContains("OrangeHRM");
+        DashboardPage dashboardPage=new DashboardPage(driver);
+        dashboardPage.waitForDashboardToLoad();
 
         Assert.assertTrue(
-                driver.getCurrentUrl().contains("dashboard"),
-                "Expected to be on dashboard page after login"
+                dashboardPage.isDashboardDisplayed(),
+                "Dashboard should be visible after successful login"
         );
     }
 
