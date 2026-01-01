@@ -4,6 +4,7 @@
         <classes>
 <!--            <class name="tests.SmokeTest"></class>-->
             <class name="tests.LoginSmokeTest"></class>
+            <class name="tests.InvalidLoginTest"></class>
         </classes>
     </test>
 </suite>

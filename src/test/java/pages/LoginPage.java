@@ -16,6 +16,7 @@ public class LoginPage {
     private By usernameInput = By.name("username");
     private By passwordInput = By.name("password");
     private By loginButton = By.cssSelector("button[type='submit']");
+    private By errorMessage = By.cssSelector(".oxd-alert-content-text");
 
     public LoginPage(WebDriver driver){
         this.driver=driver;
@@ -30,6 +31,11 @@ public class LoginPage {
         driver.findElement(usernameInput).sendKeys(username);
         driver.findElement(passwordInput).sendKeys(password);
         driver.findElement(loginButton).click();
+    }
+
+    public String getErrorMessage(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
+        return driver.findElement(errorMessage).getText();
     }
 
 }
