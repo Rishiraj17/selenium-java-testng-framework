@@ -14,6 +14,8 @@ public class DashboardPage {
 
     //Locator unique to dashboard
     private By dashboardHeader=By.xpath("//h6[text()='Dashboard']");
+    private By userDropdown=By.cssSelector(".oxd-userdropdown-tab");
+    private By logoutLink=By.xpath("//a[text()='Logout']");
 
     public DashboardPage(WebDriver driver){
         this.driver=driver;
@@ -27,5 +29,11 @@ public class DashboardPage {
     public boolean isDashboardDisplayed(){
         return driver.findElement(dashboardHeader).isDisplayed();
     }
+
+    public void logout(){
+        wait.until(ExpectedConditions.elementToBeClickable(userDropdown)).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(logoutLink)).click();
+    }
+
 
 }

@@ -63,3 +63,21 @@ not just a URL change.
 - Demonstrates multi-page workflow automation
 - Strengthens Page Object Model scalability
 
+---
+
+## Logout Flow (Authentication Lifecycle Completion)
+
+### Objective
+Verify that a logged-in user can successfully log out
+and is redirected back to the login page.
+
+### Implementation
+- Logout behavior implemented inside DashboardPage
+- User dropdown interaction handled at page level
+- LoginPage reused for post-logout validation
+
+### Why This Matters
+- Completes full authentication lifecycle (login → dashboard → logout)
+- Demonstrates clean page responsibility boundaries
+- Shows real-world workflow automation, not isolated tests
+
