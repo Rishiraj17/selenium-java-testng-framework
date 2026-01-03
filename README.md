@@ -57,9 +57,9 @@ docs/
 - Invalid login (negative scenario)
 - Dashboard validation after login
 - Logout flow and session termination
-
-The project focuses on critical flows rather than exhaustive edge-case coverage.
+- The project focuses on critical flows rather than exhaustive edge-case coverage.
 Remaining scenarios are documented as future enhancements.
+
 ---
 
 ## What This Project Demonstrates
